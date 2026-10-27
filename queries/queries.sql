@@ -5,13 +5,13 @@ SELECT DISTINCT apellido1, apellido2, nombre FROM persona p WHERE tipo = 'alumno
 SELECT nombre, apellido1, apellido2 FROM persona p WHERE tipo = 'alumno' AND telefono IS NULL;
 
 -- 3. Retorna el llistat dels alumnes que van néixer en 1999. (id, nombre, apellido1, apellido2, fecha_nacimiento)
-SELECT nombre, apellido1, apellido2 FROM persona p JOIN alumno_se_matricula_asignatura a ON p.id = a.id_alumno WHERE YEAR(fecha_nacimiento) = 1999;
+SELECT nombre, apellido1, apellido2 FROM persona p WHERE tipo = 'alumno' AND YEAR(fecha_nacimiento) = 1999;
 
 -- 4. Retorna el llistat de professors/es que no han donat d'alta el seu número de telèfon en la base de dades i a més el seu NIF acaba en K. (nombre, apellido1, apellido2, nif)
-SELECT pr.* FROM profesor pr JOIN persona p ON pr.id_profesor = p.id WHERE telefono IS NULL AND nif = '%K';
+SELECT nombre, apellido1, apellido2, nif FROM persona WHERE tipo = 'profesor' AND telefono IS NULL AND nif = '%K';
 
 -- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7. (id, nombre, cuatrimestre, curso, id_grado)
-
+SELECT id, nombre, cuatrimestre, curso, id_grado FROM asignaturas a WHERE cuatrimestre = 1 AND curso = 3 AND id_grado = 7;
 
 -- 6. Retorna un llistat dels professors/es juntament amb el nom del departament al qual estan vinculats. El llistat ha de retornar quatre columnes, primer cognom, segon cognom, nom i nom del departament. El resultat estarà ordenat alfabèticament de menor a major pels cognoms i el nom. (apellido1, apellido2, nombre, departamento)
 
