@@ -23,7 +23,7 @@ SELECT a.nombre, c.anyo_inicio, c.anyo_fin FROM asignatura a JOIN alumno_se_matr
 SELECT g.nombre AS 'nombre' FROM departamento d JOIN profesor pr ON pr.id_departamento = d.id JOIN asignatura a ON a.id_profesor = pr.id_profesor JOIN grado g ON g.id = a.id_grado WHERE g.nombre = 'Pla 2015';
 
 -- 9. Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019. (nombre, apellido1, apellido2)
-SELECT p.nombre, p.apellido1, p.apellido2 
+SELECT DISTINCT p.nombre, p.apellido1, p.apellido2 
 FROM persona p 
 JOIN alumno_se_matricula_asignatura am ON am.id_alumno = p.id 
 JOIN curso_escolar ce ON ce.id = am.id_curso_escolar 
@@ -38,7 +38,7 @@ LEFT JOIN departamento d ON d.id = pr.id_profesor
 ORDER BY d.nombre ASC, p.apellido1 ASC, p.apellido2 ASC, p.nombre ASC;
 
 -- 11. Retorna un llistat amb els professors/es que no estan associats a un departament. (apellido1, apellido2, nombre)
-
+SELECT p.apellido1, p.apellido2, p.nombre FROM persona p JOIN profesor pr ON pr.id_profesor = p.id WHERE pr.id_departamento IS NULL;
 
 -- 12. Retorna un llistat amb els departaments que no tenen professors/es associats. (nombre)
 
