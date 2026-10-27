@@ -2,25 +2,25 @@
 
 
 ## 📈 Resumen
-✅ 5 correctas de 10 queries
+✅ 5 correctas de 11 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.41 ms
+⏱ Tiempo: 0.43 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.25 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -35,14 +35,14 @@
 -Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -59,15 +59,15 @@
  Kohler | Schoen | Alejandro | Matemáticas
 ```
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.47 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar
+⏱ Tiempo: 0.53 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar, PRIMARY
 
 ---
 
@@ -80,8 +80,8 @@
 -Informática
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento, id_profesor,id_grado
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
 
 ---
 
@@ -122,11 +122,49 @@
 +Sonia | Gea | Ruiz
 ```
 
-⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
-## ❌ Query 10: Error
+## ❌ Query 10: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,13 +1,13 @@
+-departamento | apellido1 | apellido2 | nombre
+-Agronomía | Monahan | Murray | Micaela
+-Economía y Empresa | Fahey | Considine | Antonio
+-Economía y Empresa | Lemke | Rutherford | Cristina
+-Educación | Ruecker | Upton | Guillermo
+-Educación | Spencer | Lakin | Esther
+-Educación | Streich | Hirthe | Carmen
+-Informática | Hamill | Kozey | Manolo
+-Informática | Ramirez | Gea | Zoe
+-Matemáticas | Kohler | Schoen | Alejandro
+-Matemáticas | Schmidt | Fisher | David
+-Química y Física | Schowalter | Muller | Francesca
+-Química y Física | Stiedemann | Morissette | Alfredo
++nombre | apellido1 | apellido2 | nombre
++NULL | Fahey | Considine | Antonio
++NULL | Hamill | Kozey | Manolo
++NULL | Kohler | Schoen | Alejandro
++NULL | Monahan | Murray | Micaela
++NULL | Ruecker | Upton | Guillermo
++NULL | Schowalter | Muller | Francesca
++NULL | Spencer | Lakin | Esther
++NULL | Stiedemann | Morissette | Alfredo
++NULL | Streich | Hirthe | Carmen
++Agronomía | Schmidt | Fisher | David
++Derecho | Lemke | Rutherford | Cristina
++Economía y Empresa | Ramirez | Gea | Zoe
+```
+
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY
+
+---
+
+## ❌ Query 11: Error
 - **Descripción**: 'NoneType' object is not iterable
 
