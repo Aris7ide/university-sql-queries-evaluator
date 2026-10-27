@@ -2,45 +2,37 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 2 queries
+✅ 0 correctas de 3 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
 --- 
 +++ 
-@@ -1,13 +1,25 @@
+@@ -1,13 +1,7 @@
  apellido1 | apellido2 | nombre
- Domínguez | Guerrero | Antonio
-+Fahey | Considine | Antonio
+-Domínguez | Guerrero | Antonio
  Gea | Ruiz | Sonia
- Gutiérrez | López | Juan
-+Hamill | Kozey | Manolo
+-Gutiérrez | López | Juan
  Heller | Pagac | Pedro
- Herman | Pacocha | Daniel
+-Herman | Pacocha | Daniel
  Hernández | Martínez | Irene
- Herzog | Tremblay | Ramón
-+Kohler | Schoen | Alejandro
- Koss | Bayer | José
+-Herzog | Tremblay | Ramón
+-Koss | Bayer | José
  Lakin | Yundt | Inma
-+Lemke | Rutherford | Cristina
-+Monahan | Murray | Micaela
-+Ramirez | Gea | Zoe
-+Ruecker | Upton | Guillermo
  Saez | Vega | Juan
  Sánchez | Pérez | Salvador
-+Schmidt | Fisher | David
-+Schowalter | Muller | Francesca
-+Spencer | Lakin | Esther
-+Stiedemann | Morissette | Alfredo
-+Streich | Hirthe | Carmen
- Strosin | Turcotte | Ismael
+-Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.45 ms
+⏱ Tiempo: 0.50 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ❌ Query 2: Error
+- **Descripción**: 1146 (42S02): Table 'universidad.alumalumno_se_matricula_asignatura' doesn't exist
+
+
+## ❌ Query 3: Error
 - **Descripción**: 'NoneType' object is not iterable
 
