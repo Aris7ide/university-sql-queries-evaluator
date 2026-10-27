@@ -2,25 +2,25 @@
 
 
 ## 📈 Resumen
-✅ 5 correctas de 8 queries
+✅ 5 correctas de 9 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.48 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.16 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -35,14 +35,14 @@
 -Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.20 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.22 ms
+⏱ Tiempo: 0.40 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -59,18 +59,22 @@
  Kohler | Schoen | Alejandro | Matemáticas
 ```
 
-⏱ Tiempo: 0.26 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.44 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
+⏱ Tiempo: 0.54 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
 ## ❌ Query 8: Error
+- **Descripción**: 1146 (42S02): Table 'universidad.asignaturas' doesn't exist
+
+
+## ❌ Query 9: Error
 - **Descripción**: 'NoneType' object is not iterable
 
