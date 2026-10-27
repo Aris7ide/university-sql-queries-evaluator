@@ -2,18 +2,18 @@
 
 
 ## 📈 Resumen
-✅ 2 correctas de 6 queries
+✅ 2 correctas de 7 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.45 ms
+⏱ Tiempo: 0.55 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -31,7 +31,7 @@
 +Antonio | Domínguez | Guerrero
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -56,5 +56,9 @@
 
 
 ## ❌ Query 6: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDEN BY apellido1 ASC, apellido2 ASC' at line 2
+
+
+## ❌ Query 7: Error
 - **Descripción**: 'NoneType' object is not iterable
 
