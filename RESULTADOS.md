@@ -8,36 +8,57 @@
 ```diff
 --- 
 +++ 
-@@ -1,13 +1,25 @@
+@@ -1,13 +1,40 @@
  apellido1 | apellido2 | nombre
- Domínguez | Guerrero | Antonio
-+Fahey | Considine | Antonio
+-Domínguez | Guerrero | Antonio
  Gea | Ruiz | Sonia
- Gutiérrez | López | Juan
-+Hamill | Kozey | Manolo
+-Gutiérrez | López | Juan
++Gea | Ruiz | Sonia
++Gea | Ruiz | Sonia
++Gea | Ruiz | Sonia
++Gea | Ruiz | Sonia
++Gea | Ruiz | Sonia
++Gea | Ruiz | Sonia
++Gea | Ruiz | Sonia
++Gea | Ruiz | Sonia
++Gea | Ruiz | Sonia
  Heller | Pagac | Pedro
- Herman | Pacocha | Daniel
+-Herman | Pacocha | Daniel
++Heller | Pagac | Pedro
++Heller | Pagac | Pedro
  Hernández | Martínez | Irene
- Herzog | Tremblay | Ramón
-+Kohler | Schoen | Alejandro
- Koss | Bayer | José
+-Herzog | Tremblay | Ramón
+-Koss | Bayer | José
++Hernández | Martínez | Irene
++Hernández | Martínez | Irene
++Hernández | Martínez | Irene
++Hernández | Martínez | Irene
++Hernández | Martínez | Irene
++Hernández | Martínez | Irene
++Hernández | Martínez | Irene
++Hernández | Martínez | Irene
++Hernández | Martínez | Irene
++Lakin | Yundt | Inma
++Lakin | Yundt | Inma
++Lakin | Yundt | Inma
++Lakin | Yundt | Inma
++Lakin | Yundt | Inma
++Lakin | Yundt | Inma
++Lakin | Yundt | Inma
++Lakin | Yundt | Inma
++Lakin | Yundt | Inma
  Lakin | Yundt | Inma
-+Lemke | Rutherford | Cristina
-+Monahan | Murray | Micaela
-+Ramirez | Gea | Zoe
-+Ruecker | Upton | Guillermo
  Saez | Vega | Juan
++Saez | Vega | Juan
++Saez | Vega | Juan
  Sánchez | Pérez | Salvador
-+Schmidt | Fisher | David
-+Schowalter | Muller | Francesca
-+Spencer | Lakin | Esther
-+Stiedemann | Morissette | Alfredo
-+Streich | Hirthe | Carmen
- Strosin | Turcotte | Ismael
+-Strosin | Turcotte | Ismael
++Sánchez | Pérez | Salvador
++Sánchez | Pérez | Salvador
 ```
 
-⏱ Tiempo: 0.38 ms
-🔍 No se usó ningún índice en esta consulta.
+⏱ Tiempo: 0.48 ms
+✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
