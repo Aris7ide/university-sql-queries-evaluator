@@ -2,47 +2,19 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 5 queries
+✅ 2 correctas de 5 queries
 
-## ❌ Query 1: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,13 +1,7 @@
- apellido1 | apellido2 | nombre
--Domínguez | Guerrero | Antonio
- Gea | Ruiz | Sonia
--Gutiérrez | López | Juan
- Heller | Pagac | Pedro
--Herman | Pacocha | Daniel
- Hernández | Martínez | Irene
--Herzog | Tremblay | Ramón
--Koss | Bayer | José
- Lakin | Yundt | Inma
- Saez | Vega | Juan
- Sánchez | Pérez | Salvador
--Strosin | Turcotte | Ismael
-```
+## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.37 ms
-✅ Se usó índice(s) en la consulta: PRIMARY
+⏱ Tiempo: 0.43 ms
+🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 2: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,3 +1,4 @@
- nombre | apellido1 | apellido2
- Pedro | Heller | Pagac
--Ismael | Strosin | Turcotte
-+Pedro | Heller | Pagac
-+Pedro | Heller | Pagac
-```
+## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.21 ms
-✅ Se usó índice(s) en la consulta: PRIMARY
+⏱ Tiempo: 0.27 ms
+🔍 No se usó ningún índice en esta consulta.
 
 ---
 
@@ -57,7 +29,7 @@
 +nombre | apellido1 | apellido2
 ```
 
-⏱ Tiempo: 0.19 ms
+⏱ Tiempo: 0.30 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -73,7 +45,7 @@
 +id_profesor | id_departamento
 ```
 
-⏱ Tiempo: 0.22 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
