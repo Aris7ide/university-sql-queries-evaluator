@@ -2,25 +2,25 @@
 
 
 ## 📈 Resumen
-✅ 5 correctas de 11 queries
+✅ 7 correctas de 12 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.43 ms
+⏱ Tiempo: 0.26 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.16 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.17 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -35,14 +35,14 @@
 -Guillermo | Ruecker | Upton | 85869555K
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.16 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.19 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -59,15 +59,15 @@
  Kohler | Schoen | Alejandro | Matemáticas
 ```
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.24 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.53 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.27 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
@@ -80,49 +80,14 @@
 -Informática
 ```
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.22 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
 
 ---
 
-## ❌ Query 9: Incorrecto
-```diff
---- 
-+++ 
-@@ -2,3 +2,30 @@
- Inma | Lakin | Yundt
- Irene | Hernández | Martínez
- Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-+Inma | Lakin | Yundt
-+Irene | Hernández | Martínez
-+Sonia | Gea | Ruiz
-```
+## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.21 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
@@ -160,11 +125,21 @@
 +Economía y Empresa | Ramirez | Gea | Zoe
 ```
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.24 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
-## ❌ Query 11: Error
+## ✅ Query 11: Correcto
+
+⏱ Tiempo: 0.14 ms
+🔍 No se usó ningún índice en esta consulta.
+
+🚨 **Problemas detectados:**
+🚨 `JOIN` sin índice. Revisar claves foráneas e índices.
+
+---
+
+## ❌ Query 12: Error
 - **Descripción**: 'NoneType' object is not iterable
 
