@@ -72,10 +72,10 @@ LEFT JOIN curso_escolar ce ON am.id_curso_escolar = ce.id
 WHERE ce.id IS NULL;
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
-
+SELECT COUNT(*) FROM persona p WHERE p.tipo = 'alumno';
 
 -- 17. Calcula quants alumnes van néixer en 1999. (total)
-
+SELECT COUNT(*) FROM persona p WHERE p.fecha_nacimiento = 1999;
 
 -- 18. Calcula quants professors/es hi ha en cada departament. El resultat només ha de mostrar dues columnes, una amb el nom del departament i una altra amb el nombre de professors/es que hi ha en aquest departament. El resultat només ha d'incloure els departaments que tenen professors/es associats i haurà d'estar ordenat de major a menor pel nombre de professors/es. (departamento, total)
 
