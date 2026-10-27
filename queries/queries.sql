@@ -2,14 +2,13 @@
 SELECT DISTINCT apellido1, apellido2, nombre FROM persona p JOIN alumno_se_matricula_asignatura a ON p.id = a.id_alumno ORDER BY apellido1 ASC, apellido2 ASC, nombre ASC;
 
 -- 2. Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades. (nombre, apellido1, apellido2)
-SELECT nombre, apellido1, apellido2 FROM persona p JOIN alumalumno_se_matricula_asignatura a ON p.id = a.id_alumno WHERE telefono IS NULL;
+SELECT nombre, apellido1, apellido2 FROM persona p JOIN alumno_se_matricula_asignatura a ON p.id = a.id_alumno WHERE telefono IS NULL;
 
 -- 3. Retorna el llistat dels alumnes que van néixer en 1999. (id, nombre, apellido1, apellido2, fecha_nacimiento)
-
-
+SELECT nombre, apellido1, apellido2 FROM persona p JOIN alumno_se_matricula_asignatura a ON p.id = a.id_alumno WHERE YEAR(fecha_de_nacimiento) = 1999;
 
 -- 4. Retorna el llistat de professors/es que no han donat d'alta el seu número de telèfon en la base de dades i a més el seu NIF acaba en K. (nombre, apellido1, apellido2, nif)
-
+SELECT pr.* FROM profesor pr JOIN persona p ON pr.id_profesor = p.id WHERE telfono IS NULL AND nif = '%K';
 
 -- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7. (id, nombre, cuatrimestre, curso, id_grado)
 
