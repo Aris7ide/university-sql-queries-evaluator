@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 3 queries
+✅ 0 correctas de 5 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -24,15 +24,36 @@
 -Strosin | Turcotte | Ismael
 ```
 
-⏱ Tiempo: 0.50 ms
+⏱ Tiempo: 0.53 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
-## ❌ Query 2: Error
-- **Descripción**: 1146 (42S02): Table 'universidad.alumalumno_se_matricula_asignatura' doesn't exist
+## ❌ Query 2: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,3 +1,4 @@
+ nombre | apellido1 | apellido2
+ Pedro | Heller | Pagac
+-Ismael | Strosin | Turcotte
++Pedro | Heller | Pagac
++Pedro | Heller | Pagac
+```
 
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: PRIMARY
+
+---
 
 ## ❌ Query 3: Error
+- **Descripción**: 1054 (42S22): Unknown column 'fecha_de_nacimiento' in 'where clause'
+
+
+## ❌ Query 4: Error
+- **Descripción**: 1054 (42S22): Unknown column 'telfono' in 'where clause'
+
+
+## ❌ Query 5: Error
 - **Descripción**: 'NoneType' object is not iterable
 
