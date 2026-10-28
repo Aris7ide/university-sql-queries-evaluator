@@ -20,7 +20,12 @@ SELECT apellido1, apellido2, p.nombre, d.nombre AS 'departamento' FROM persona p
 SELECT a.nombre, c.anyo_inicio, c.anyo_fin FROM asignatura a JOIN alumno_se_matricula_asignatura am ON am.id_asignatura = a.id JOIN curso_escolar c ON c.id = am.id_curso_escolar JOIN persona p ON p.id = am.id_alumno WHERE p.nif = '26902806M';
 
 -- 8. Retorna un llistat amb el nom de tots els departaments que tenen professors/es que imparteixen alguna assignatura en el Grau en Enginyeria Informàtica (Pla 2015). (nombre)
-SELECT d.nombre AS 'nombre' FROM departamento d JOIN profesor pr ON pr.id_departamento = d.id JOIN asignatura a ON a.id_profesor = pr.id_profesor JOIN grado g ON g.id = a.id_grado WHERE g.nombre = 'Grau en Enginyeria Informàtica (Pla 2015)';
+SELECT DISTINCT d.nombre AS nombre
+FROM departamento d 
+JOIN profesor pr ON pr.id_departamento = d.id 
+JOIN asignatura a ON a.id_profesor = pr.id_profesor 
+JOIN grado g ON g.id = a.id_grado 
+WHERE g.nombre = 'Grau en Enginyeria Informàtica (Pla 2015)';
 
 -- 9. Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019. (nombre, apellido1, apellido2)
 SELECT DISTINCT p.nombre, p.apellido1, p.apellido2 
@@ -64,12 +69,15 @@ WHERE a.id_profesor IS NULL;
 
 -- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
 SELECT d.nombre
-FROM departamento d 
-JOIN profesor pr ON d.id = pr.id_departamento
-JOIN asignatura a ON pr.id_profesor = a.id_profesor
-JOIN alumno_se_matricula_asignatura am ON a.id = am.id_asignatura
-LEFT JOIN curso_escolar ce ON am.id_curso_escolar = ce.id
-WHERE ce.id IS NULL;
+FROM departamento d
+LEFT JOIN (
+    SELECT DISTINCT pr.id_departamento
+    FROM profesor pr
+    JOIN asignatura a ON pr.id_profesor = a.id_profesor
+    JOIN alumno_se_matricula_asignatura am ON a.id = am.id_asignatura
+    JOIN curso_escolar ce ON am.id_curso_escolar = ce.id
+) AS deptos_amb_cursos ON d.id = deptos_amb_cursos.id_departamento
+WHERE deptos_amb_cursos.id_departamento IS NULL;
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
 SELECT COUNT(*) AS 'total' FROM persona p WHERE p.tipo = 'alumno';
