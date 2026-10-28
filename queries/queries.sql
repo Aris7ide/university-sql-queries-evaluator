@@ -70,14 +70,12 @@ WHERE a.id_profesor IS NULL;
 -- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
 SELECT d.nombre
 FROM departamento d
-LEFT JOIN (
-    SELECT DISTINCT pr.id_departamento
-    FROM profesor pr
-    JOIN asignatura a ON pr.id_profesor = a.id_profesor
-    JOIN alumno_se_matricula_asignatura am ON a.id = am.id_asignatura
-    JOIN curso_escolar ce ON am.id_curso_escolar = ce.id
-) AS deptos_amb_cursos ON d.id = deptos_amb_cursos.id_departamento
-WHERE deptos_amb_cursos.id_departamento IS NULL;
+LEFT JOIN profesor pr ON d.id = pr.id_departamento
+LEFT JOIN asignatura a ON pr.id_profesor = a.id_profesor
+LEFT JOIN alumno_se_matricula_asignatura am ON a.id = am.id_asignatura
+LEFT JOIN curso_escolar ce ON am.id_curso_escolar = ce.id
+WHERE ce.id IS NULL
+GROUP BY d.id, d.nombre;
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
 SELECT COUNT(*) AS 'total' FROM persona p WHERE p.tipo = 'alumno';
