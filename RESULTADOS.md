@@ -2,54 +2,54 @@
 
 
 ## 📈 Resumen
-✅ 19 correctas de 23 queries
+✅ 19 correctas de 24 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.47 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.21 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.20 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.20 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.22 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.37 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.30 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
 
 ## ✅ Query 7: Correcto
 
 ⏱ Tiempo: 0.45 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY,nif, PRIMARY
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
@@ -62,28 +62,28 @@
 -Informática
 ```
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.30 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY, PRIMARY,id_departamento
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.30 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.29 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
 
 ## ✅ Query 10: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.22 ms
+⏱ Tiempo: 0.23 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -100,7 +100,7 @@
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.26 ms
 ✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
 
 ---
@@ -114,8 +114,8 @@
 
 ## ✅ Query 15: Correcto
 
-⏱ Tiempo: 0.44 ms
-✅ Se usó índice(s) en la consulta: id_departamento, id_profesor, id_asignatura, PRIMARY
+⏱ Tiempo: 0.31 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY, id_departamento, id_asignatura
 
 ---
 
@@ -128,15 +128,15 @@
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.21 ms
+⏱ Tiempo: 0.23 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.26 ms
-✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
+⏱ Tiempo: 0.27 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
 
 ---
 
@@ -159,21 +159,21 @@
  Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
 ## ✅ Query 20: Correcto
 
-⏱ Tiempo: 0.25 ms
+⏱ Tiempo: 0.29 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 21: Correcto
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.27 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -182,22 +182,36 @@
 ```diff
 --- 
 +++ 
-@@ -1,6 +1,2 @@
+@@ -1,4 +1,4 @@
 -grau | tipo | total_creditos
--Grado en Ingeniería Informática (Plan 2015) | básica | 72.00
--Grado en Ingeniería Informática (Plan 2015) | obligatoria | 54.00
--Grado en Ingeniería Informática (Plan 2015) | optativa | 180.00
--Grado en Biotecnología (Plan 2015) | básica | 60.00
--Grado en Biotecnología (Plan 2015) | obligatoria | 120.00
++grau | tipus | total_creditos
+ Grado en Ingeniería Informática (Plan 2015) | básica | 72.00
+ Grado en Ingeniería Informática (Plan 2015) | obligatoria | 54.00
+ Grado en Ingeniería Informática (Plan 2015) | optativa | 180.00
+```
+
+⏱ Tiempo: 0.27 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
+
+---
+
+## ❌ Query 23: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,3 +1,2 @@
+-anyo_inicio | total
+-2014.00 | 3.00
+-2018.00 | 3.00
 +id | nif | nombre | apellido1 | apellido2 | ciudad | direccion | telefono | fecha_nacimiento | sexo | tipo
 +12.00 | 85366986W | Carmen | Streich | Hirthe | Almería | C/ Almanzora | NULL | 1971-04-29 | M | profesor
 ```
 
-⏱ Tiempo: 0.25 ms
+⏱ Tiempo: 0.24 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 23: Error
+## ❌ Query 24: Error
 - **Descripción**: 'NoneType' object is not iterable
 
